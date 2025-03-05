@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Irish+Grover&family=Itim&family=Jersey+10&family=Knewave&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Stoke:wght@300;400&display=swap');
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    height: auto;
+}
+
+:root{
+    --color-principal: #6193FF;
+    --font-family:  "Itim", cursive;
+}
+
+#menu {
+    background-color: var(--color-principal);
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    color: white;
+}
+
+.menu__ul{
+    font-family: var(--font-family);
+    line-height: 20%;
+    font-size: 3rem;
+    font-weight: 950;    
+    display: flex;
+    flex-direction: column;
+    margin-top: -35%;
+    margin-left: 55%;
+}
+
+.logo{
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 50%;
+    padding: 8%;
+}
+
+.izquierda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.txt__nombre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-family: var(--font-family);
+}
+
+.derecha{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2%;
+    font-size: 2rem;
+    font-family: var(--font-family);
+}
+
+
+
+.txt__slogan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: 2rem;
+    padding: 4%;
+}
+
+.txt__productos{
+    font-family: var(--font-family);
+    margin-left: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.box__contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2%;
+    flex-wrap: wrap;
+    margin-left: 2%;
+    margin-bottom: 5%;
+}
+
+.contenedor__productos{
+    width: 5%;
+    width: 17.5rem;
+}
+
+img{
+    width: 100%;
+}
+
+.img__productos{
+    height: auto;
+}
+
+.flex__precios{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+.flex__precios {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txt__precio__antes {
+    color: rgba(0, 0, 0, 0.706);
+}
+
+.txt__precio_ahora {
+    font-weight: bold;
+}
+
+
+.txt__precio_ahora{
+    color: black;
+    font-size: 1.5rem;
+}
+
+button, .btn__adquirir{
+    padding: 7px;
+    background-color: var(--color-principal);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.txt__envianos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 1.7rem;
+    margin-bottom: 1.2%;
+}
+
+.flex__btn__wpp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn__wpp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background-color: #A8FF93;
+    border-radius: 40px;
+}
+
+.txt__aqui{
+    display: flex;
+    justify-content: center;
+}
+
+.logo__wpp{
+    width: 250px;
+}
+
+.txt__numero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    padding-bottom: 5%;
+    margin-top: 1.6rem;
+}
+
+@media (max-width: 500px) {
+    .txt__nombre{
+        display: none;
+    }
+}
