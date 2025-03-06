@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Visio Craft</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon/img" href="./IMAGENES/LOGO.jpg">
 </head>
+
 <body>
     <!-- MENU -->
     <nav id="menu">
@@ -17,14 +19,14 @@
                 <li class="menu__ul__hamburguesa">__</li>
             </ul>
             <ul class="izquierda">
-                <li ><img class="logo" src="./IMAGENES/LOGO.jpg" alt="VISIO CRAFT"></li>
+                <li><img class="logo" src="./IMAGENES/LOGO.jpg" alt="VISIO CRAFT"></li>
             </ul>
         </div>
         <p class="txt__nombre">VISIO CRAFT</p>
 
         <div class="derecha">
             <ul>
-               <li>CATALOGO</li>
+                <li>CATALOGO</li>
             </ul>
         </div>
     </nav>
@@ -39,23 +41,25 @@
             <p class="txt__productos">PRODUCTOS</p>
         </div>
         <div class="box__contenedor">
-            <div class="contenedor__productos">
-                <div class="img__productos">
-                    <img src="./IMAGENES/FoodMaster Pro.png" alt="">
-                </div>
-                <p>FoodMaster Pro: Pica, ralla y mezcla sin esfuerzo + 🎁 OBTEN GRATIS LIBRO CON RECETAS</p>
-                <div class="flex__precios">
-                    <div class="txt__precio__antes">
-                        ̶2̶0̶0̶.̶0̶0̶0̶ ̶C̶O̶P̶
+            <a href="./PAGINAS/producto1.html">
+                <div class="contenedor__productos">
+                    <div class="img__productos">
+                        <img src="./IMAGENES/FoodMaster Pro.png" alt="">
                     </div>
-                    <div class="txt__precio_ahora">
-                        $200.000 COP
+                    <p>FoodMaster Pro: Pica, ralla y mezcla sin esfuerzo + 🎁 OBTEN GRATIS LIBRO CON RECETAS</p>
+                    <div class="flex__precios">
+                        <div class="txt__precio__antes">
+                            ̶2̶0̶0̶.̶0̶0̶0̶ ̶C̶O̶P̶
+                        </div>
+                        <div class="txt__precio_ahora">
+                            $200.000 COP
+                        </div>
+                    </div>
+                    <div class="btn__adquirir">
+                        <button class="adquirir">ABQUIRIR</button>
                     </div>
                 </div>
-                <div class="btn__adquirir">
-                    <button>ABQUIRIR</button>
-                </div>
-            </div>
+            </a>
             <div class="contenedor__productos">
                 <div class="img__productos">
                     <img src="./IMAGENES/KIT RENACER.png" alt="">
@@ -70,7 +74,7 @@
                     </div>
                 </div>
                 <div class="btn__adquirir">
-                    <button>ABQUIRIR</button>
+                    <button class="adquirir">ABQUIRIR</button>
                 </div>
             </div>
             <div class="contenedor__productos">
@@ -87,14 +91,16 @@
                     </div>
                 </div>
                 <div class="btn__adquirir">
-                    <button>ABQUIRIR</button>
+                    <button class="adquirir">ABQUIRIR</button>
                 </div>
             </div>
             <div class="contenedor__productos">
                 <div class="img__productos">
                     <img src="./IMAGENES/SKINMASTER.png" alt="">
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio rem eligendi ipsam quisquam consectetur voluptatum ipsa ducimus in eum est alias, laboriosam aliquam quod quas culpa recusandae totam quae? Sapiente?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio rem eligendi ipsam quisquam consectetur
+                    voluptatum ipsa ducimus in eum est alias, laboriosam aliquam quod quas culpa recusandae totam quae?
+                    Sapiente?</p>
                 <div class="flex__precios">
                     <div class="txt__precio__antes">
                         ̶ ̶2̶0̶0̶.̶0̶0̶0̶ ̶C̶O̶P̶
@@ -104,7 +110,7 @@
                     </div>
                 </div>
                 <div class="btn__adquirir">
-                    <button>ABQUIRIR</button>
+                    <button class="adquirir">ABQUIRIR</button>
                 </div>
             </div>
         </div>
@@ -115,19 +121,38 @@
             <div class="txt__envianos">
                 <p>ENVIANOS MENSAJE PARA RECIBIR TU SOLICITUD <br> Y CONFIRMAR TU PEDIDO👇</p>
             </div>
-    
+
             <div class="flex__btn__wpp">
                 <div class="btn__wpp">
-                    <img class="logo__wpp" src="./IMAGENES/logo wpp.png" alt="">
+                    <a href="https://wa.me/573052143778?text=¡Hola!%20Estoy%20interesado%20en%20comprar%20el%20producto.">
+                        <img class="logo__wpp" src="./IMAGENES/logo wpp.png" alt="">
+                    </a>
                 </div>
             </div>
             <p class="txt__aqui">Haz click aquí</p>
-    
+
             <div class="txt__numero">
                 +57 3052143778
             </div>
         </section>
     </article>
 
+    <div class="parallax">
+        <nav class="nav__close">
+            <button class="button__close">X</button>
+        </nav>
+
+        <div class="box__navegacion">
+            <a class="inicio__navegacion" href="./PAGINAS/producto1.html    ">
+                <p>Catalogo</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
 </body>
+
 </html>

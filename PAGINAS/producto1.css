@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Irish+Grover&family=Itim&family=Jersey+10&family=Knewave&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Stoke:wght@300;400&display=swap');
+
+
+:root{
+    --color-principal: #6193FF;
+    --font-family:  "Itim", cursive;
+}
+
+.bar__descuentos{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 3.2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+.txt{
+    font-family: var(--font-family);
+    margin-top: 2%;
+}
+
+.descuentos {
+    padding: 20px;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    animation: movimientoAlea 10s linear infinite; /* Cambié la duración a 10s para que el movimiento sea suave */
+}
+
+@keyframes movimientoAlea {
+    0% {
+        transform: translateX(100%); /* Inicia el contenido fuera de la pantalla por la derecha */
+    }
+    100% {
+        transform: translateX(-100%); /* Mueve el contenido hacia la izquierda hasta salir completamente */
+    }
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    flex-wrap: wrap;
+}
+
+
+.imagen__principal{
+    box-sizing: border-box;
+    width: 90%;
+}
+
+.contenedor__imagenes{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    gap: 15px;
+}
+
+.imagenes{
+    border-radius: 20px;
+    width: 70%;
+}
+
+.lado__izquierdo{
+    width: 50%;
+}
+
+.titulo{
+    font-size: 2rem;
+    line-height: 85%;
+}
+
+.lado__derecho{
+    width: 50%;
+}
+
+.precio__antes{
+    padding-top: 4%;
+    color: #00000096;
+}
+
+.precio__ahora{
+    padding-top: 0%;
+    font-size: 2.1rem;
+    margin: 0%;
+    font-weight: 300;
+}
+
+.ahorra{
+    background-color: var(--color-principal);;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: white;
+    font-size: 1rem;
+}
+
+.sub__contenedor{
+    background-color: rgba(206, 206, 206, 0.299);
+    padding: 2%;
+    margin-top: 5%;
+    border-radius: 15px;
+}
+
+.calidad{
+    width: 95%;
+}
+
+.box__love{
+    background-color: #006172;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: white;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.a__accion{
+    display: flex;
+    justify-content: center ;
+}
+
+.box__derecha{
+    width:5%;
+    margin-left: 5%;
+}
+
+.txt__izquierda{
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+    padding: 0%;
+}
+
+.btn__accion{
+    padding: 3% 15%;
+    margin: 2%;
+    border: none;
+    background-color: var(--color-principal);;
+    color: white;
+    font-weight: 600;
+    border-radius: 35px;
+    font-size: 1.2rem;
+    animation: movimieto 0.5s infinite linear; /* Tiempo más rápido */
+    cursor: pointer;
+}
+
+a{
+    width: 100%;
+}
+
+
+
+.box__btn__accion {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    animation: shake 0.5s infinite; /* Tiempo rápido para sacudida */
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0); /* Empieza en su posición original */
+    }
+    25% {
+        transform: rotateX(-5deg); /* Se mueve ligeramente hacia la izquierda */
+    }
+    50% {
+        transform: rotateX(1deg); /* Se mueve ligeramente hacia la derecha */
+    }
+    75% {
+        transform: rotateY(10deg); /* Se mueve ligeramente hacia la izquierda nuevamente */
+    }
+    100% {
+        transform: translateX(0); /* Regresa a su posición original */
+    }
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    .contenedor{
+        flex-direction: column;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .lado__derecho{
+        width: 100%;
+    }
+
+    .lado__izquierdo{
+        width: 100%;
+    }
+
+    .contenedor__imagenes, .imagenes, .imagen__principal
+    .box__derecha, .imagen__derecha, #imagenPrincipal{
+        width: 100%;
+    }
+    
+    .box__btn__accion{
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -36,6 +36,7 @@ li{
     flex-direction: column;
     margin-top: -35%;
     margin-left: 55%;
+    cursor: pointer;
 }
 
 .logo{
@@ -134,13 +135,20 @@ img{
     font-weight: bold;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+    padding: 0%;
+    margin: 0%;
+}
+
 
 .txt__precio_ahora{
     color: black;
     font-size: 1.5rem;
 }
 
-button, .btn__adquirir{
+.adquirir, .btn__adquirir{
     padding: 7px;
     background-color: var(--color-principal);
     border: none;
@@ -199,6 +207,53 @@ button, .btn__adquirir{
     padding-bottom: 5%;
     margin-top: 1.6rem;
 }
+
+.parallax{
+    position: absolute;
+    top: 0%;
+    width: 50%;
+    height: 100vh;
+    background:     rgba(13, 107, 248, 0.532);
+    z-index: 1000;
+    display: none; 
+}
+
+.nav__close{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    height: auto;
+}
+
+.button__close{
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.box__navegacion{
+    width: 100%;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem ;
+    font-weight: bolder;
+    font-family: var(--font-family);
+}
+
+.inicio__navegacion{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
 
 @media (max-width: 500px) {
     .txt__nombre{
