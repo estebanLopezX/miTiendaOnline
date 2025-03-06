@@ -67,9 +67,17 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     margin-right: 2%;
     font-size: 2rem;
     font-family: var(--font-family);
+}
+
+#nav__user{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
 }
 
 

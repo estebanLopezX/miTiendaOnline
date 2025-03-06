@@ -97,5 +97,61 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     parallaxFuncionando(); // Ejecutar la función de parallax
+
+    /* ARRAY DE GUSTOS */
+
+    const nombresConLeyenda = [
+        "Sebastian L. y a otras personas les gusta este producto",
+        "Ana M. y a otras personas les gusta este producto",
+        "Carlos P. y a otras personas les gusta este producto",
+        "Lucía R. y a otras personas les gusta este producto",
+        "Pedro G. y a otras personas les gusta este producto",
+        "Marta V. y a otras personas les gusta este producto",
+        "José F. y a otras personas les gusta este producto",
+        "Laura T. y a otras personas les gusta este producto",
+        "Luis J. y a otras personas les gusta este producto",
+        "María D. y a otras personas les gusta este producto",
+        "David C. y a otras personas les gusta este producto",
+        "Elena S. y a otras personas les gusta este producto",
+        "Raúl H. y a otras personas les gusta este producto",
+        "Patricia B. y a otras personas les gusta este producto",
+        "Andrés N. y a otras personas les gusta este producto",
+        "Sandra K. y a otras personas les gusta este producto",
+        "Javier M. y a otras personas les gusta este producto",
+        "Carmen Q. y a otras personas les gusta este producto",
+        "Felipe Z. y a otras personas les gusta este producto",
+        "Natalia L. y a otras personas les gusta este producto",
+        "Diego A. y a otras personas les gusta este producto",
+        "Inés P. y a otras personas les gusta este producto",
+        "Antonio E. y a otras personas les gusta este producto",
+        "Marina R. y a otras personas les gusta este producto",
+        "Alberto I. y a otras personas les gusta este producto"
+    ];
+
+    const textoIzquierda = document.querySelector('.texto__izquierda');
+    let indiceActual = 0;
+
+    // Función que muestra el siguiente nombre
+    function mostrarNombre() {
+        // Limpiamos el contenedor antes de agregar el nuevo nombre
+        textoIzquierda.innerHTML = ''; 
+        
+        // Crear un nuevo <p> y agregar el nombre correspondiente
+        const pNombres = document.createElement('p');
+        pNombres.classList.add('texto__izquierda'); // Añadir clase si es necesario
+        pNombres.textContent = nombresConLeyenda[indiceActual]; // Establecer el texto del <p>
+        
+        // Agregar el <p> al contenedor
+        textoIzquierda.appendChild(pNombres);
+
+        // Actualizar el índice para el siguiente nombre
+        indiceActual = (indiceActual + 1) % nombresConLeyenda.length; // Ciclo a través del array
+    }
+
+    // Mostrar el primer nombre inmediatamente
+    mostrarNombre();
+
+    // Cambiar el nombre cada 10 segundos
+    setInterval(mostrarNombre, 4000); // 10000 ms = 10 segundos  
 })
 

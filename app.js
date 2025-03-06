@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (isUnlock && parallax && menu) {
             menu.addEventListener('click', function (e) {
                 e.stopPropagation(); // Evitar que el clic en el menú se propague al body
+                console.log('hola');
+                
                 
                 parallax.style.display = "block"; // Hacer visible el parallax
                 parallax.style.left = "-1200px"; // Inicialmente fuera de la vista
