@@ -91,8 +91,7 @@
       border: 2px solid #6193FF;
       border-radius: 5px;
       width: 200px;
-    }
-  </style>
+    }  </style>
 </head>
 
 <body>
@@ -122,8 +121,7 @@
     </div>
   </nav>
 
-  <!-- menu -->
-
+  <!-- Ruleta de descuentos -->
   <div class="ruleta-container">
     <div class="ruleta" id="ruleta">
       <div class="seccion" style="transform: rotate(0deg);">
@@ -164,7 +162,6 @@
     <button class="btn-reiniciar" id="reiniciarBtn">Reiniciar Ruleta</button>
   </div>
 
-
   <!-- PARALLAX -->
   <div class="parallax">
     <nav class="nav__close">
@@ -180,37 +177,14 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-
-
   <script>
     // Definimos los valores de la ruleta (de 5 en 5 hasta 50%)
     const porcentajes = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
 
-    // Definimos la fecha en la que quieres habilitar los inputs (por ejemplo, el 13 de marzo de 2025)
-    const fechaHabilitacion = new Date('2025-03-15'); // Cambia esta fecha a la que desees
-
-    // Obtener la fecha actual
-    const fechaActual = new Date();
-
-    // Si la fecha actual es posterior a la fecha de habilitación, eliminamos el dato en localStorage
-    if (fechaActual >= fechaHabilitacion) {
-      localStorage.removeItem('codigoIngresado'); // Habilitamos los inputs y el botón
-    }
-
-    // Comprobar si ya se giró la ruleta en esta sesión
-    if (localStorage.getItem('ruletaGirada') === 'true') {
-      document.getElementById("ruleta").style.pointerEvents = "none"; // Desactiva el clic
-      document.getElementById("resultado").innerText = 'Ya has girado la ruleta. No puedes hacerlo nuevamente. Te esperamos la siguiente semana en nuestra ruleta de descuentos.';
-    }
-
-    // Verificar si el código ya fue ingresado
-    if (localStorage.getItem('codigoIngresado') === 'true') {
-      document.getElementById("codigoInput").style.display = "none"; // Ocultar el input
-      document.getElementById("reiniciarBtn").style.display = "none"; // Ocultar el botón
-    }
-
     // Bandera para evitar múltiples clics
     let isRotating = false;
+    let ruletaGirada = false; // Para saber si ya se giró la ruleta en esta sesión
+    let codigoIngresado = false; // Para saber si el código ha sido ingresado
 
     // Función para obtener un valor aleatorio de los porcentajes
     function obtenerPorcentajeAleatorio() {
@@ -220,7 +194,7 @@
 
     // Función para hacer que la ruleta gire
     function girarRuleta() {
-      if (isRotating || localStorage.getItem('ruletaGirada') === 'true') return;
+      if (isRotating || ruletaGirada) return;
 
       isRotating = true;
       const porcentaje = obtenerPorcentajeAleatorio();
@@ -232,7 +206,7 @@
       // Espera a que termine la animación para mostrar el resultado
       setTimeout(() => {
         document.getElementById("resultado").innerText = `OBTUVISTE UN DESCUENTO DEL: ${porcentaje}%`;
-        localStorage.setItem('ruletaGirada', 'true'); // Guardamos que ya se giró
+        ruletaGirada = true; // Marcamos que ya giramos la ruleta
         document.getElementById("ruleta").style.pointerEvents = "none"; // Desactivar el clic después de girar
         isRotating = false;
       }, 3000);
@@ -243,19 +217,19 @@
 
     // Función para reiniciar la ruleta si el código es correcto
     function reiniciarRuleta() {
-      const codigoIngresado = document.getElementById("codigoInput").value;
+      const codigoIngresadoInput = document.getElementById("codigoInput").value;
       const codigoCorrecto = "5656"; // El código correcto
 
-      if (codigoIngresado === codigoCorrecto) {
+      if (codigoIngresadoInput === codigoCorrecto) {
         // Si el código es correcto
-        localStorage.removeItem('ruletaGirada'); // Eliminar el registro de que la ruleta ya fue girada
+        ruletaGirada = false; // Eliminar el registro de que la ruleta ya fue girada
         document.getElementById("resultado").innerText = 'OBTUVISTE UN DESCUENTO DEL: -'; // Resetear el resultado
         document.getElementById("ruleta").style.pointerEvents = "auto"; // Habilitar el clic nuevamente
         document.getElementById("ruleta").style.transform = "rotate(0deg)"; // Resetear la ruleta
         alert('La ruleta ha sido reiniciada');
 
         // Guardamos que el código fue ingresado correctamente
-        localStorage.setItem('codigoIngresado', 'true');
+        codigoIngresado = true;
 
         // Ocultar el input y el botón de reiniciar
         document.getElementById("codigoInput").style.display = "none";
