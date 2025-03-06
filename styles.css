@@ -101,7 +101,7 @@ li{
 .box__contenedor{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     gap: 1.2rem;
     margin-top: 2%;
     flex-wrap: wrap;
@@ -219,9 +219,9 @@ a{
 .parallax{
     position: absolute;
     top: 0%;
-    width: 50%;
+    width: 80%;
     height: 100vh;
-    background:     rgba(13, 107, 248, 0.532);
+    background:     rgba(13, 107, 248, 0.725);
     z-index: 1000;
     display: none; 
 }
@@ -250,6 +250,8 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
     color: white;
     font-size: 3rem ;
     font-weight: bolder;
@@ -266,5 +268,17 @@ a{
 @media (max-width: 500px) {
     .txt__nombre{
         display: none;
+    }
+
+    #nav__user{
+        display: none;
+    }
+
+    .izquierda__imagen{
+        margin-left: 15rem;
+    }
+    .menu__ul{
+        margin-top: -10%;
+        margin-left: 10px;
     }
 }

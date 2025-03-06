@@ -29,6 +29,7 @@
     padding: 20px;
     white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
     animation: movimientoAlea 10s linear infinite; /* Cambié la duración a 10s para que el movimiento sea suave */
+    font-weight: bold;
 }
 
 @keyframes movimientoAlea {

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var ls = gsap.timeline();
     // Elementos relacionados con los descuentos
     const descuentos = document.querySelectorAll('.bar__descuentos'); // Selecciona todos los elementos con la clase 'bar__descuentos'
-    const elementos = ['BUEN PRODUCTO', '50% OFF DESCUENTO', 'REGALO DE PDF POR LA COMPRA ']; // Array con los nuevos textos
+    const elementos = ['PREGUNTA POR TU DESCUENTO!🔥', '📦YA CASI SE AGOTAN!!', 'RECIBE UN PDF GRATIS POR LA COMPRA🎁']; // Array con los nuevos textos
 
     function agregarElementos() {
         // Recorremos todos los elementos seleccionados
